@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hery & Nuna AI Pro</title>
+<meta name="theme-color" content="#1e3a8a">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#fff7ed;color:#1e293b;padding-bottom:70px}
+header{background:linear-gradient(135deg,#1e3a8a,#2563eb,#ec4899);color:#fff;padding:22px;text-align:center;border-radius:0 0 28px 28px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px}
+.btn{border:0;border-radius:18px;padding:20px;color:#fff;font-weight:800;font-size:15px;cursor:pointer}
+.blue{background:#2563eb}.pink{background:#ec4899}.green{background:#16a34a}.purple{background:#7c3aed}.orange{background:#f59e0b}
+.card{background:#fff;border:2px solid #fde68a;border-radius:18px;padding:16px;margin:12px}
+#koin{background:#fef3c7;padding:8px 18px;border-radius:20px;font-weight:800;display:inline-block;margin-top:8px}
+.shop{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.item{border:2px solid #e5e7eb;border-radius:14px;padding:10px;text-align:center;background:#f8fafc}.item b{font-size:34px}
+.small{font-size:12px;color:#64748b}input{width:100%;padding:12px;margin:6px 0;border-radius:10px;border:1px solid #cbd5e1}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;border-top:1px solid #eee}nav button{flex:1;padding:14px;border:0;background:none;font-weight:700;color:#64748b}
+#lock{display:none;position:fixed;inset:0;background:#0f172a;color:#fff;text-align:center;padding:90px 20px;z-index:200}
+#splash{position:fixed;inset:0;background:linear-gradient(135deg,#1e3a8a,#7c3aed,#ec4899);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;z-index:100;text-align:center;padding:20px;transition:.6s}
+#splash.hide{opacity:0;pointer-events:none}.bubble{font-size:64px;animation:a 1.2s infinite}@keyframes a{50%{transform:translateY(-12px)}}
+#splash input{padding:14px;border-radius:22px;border:0;width:85%;max-width:300px;text-align:center;margin:14px 0;color:#000}
+#splash button{background:#fff;color:#ec4899;border:0;padding:14px 32px;border-radius:28px;font-weight:800;cursor:pointer}
+.dash{background:#f1f5f9;border-radius:12px;padding:10px;margin-top:8px;font-size:12px}
+</style>
+</head>
+<body>
+<div id="splash"><div>✨ ⭐ ✨</div><div class="bubble">👦🏻👧🏻</div><h1>Hery & Nuna AI Pro</h1><p>Siapa nama bintang kecilku?</p><input id="namaAnak" maxlength="20" placeholder="Tulis namamu..."><br><button onclick="masuk()">Mulai! 🚀</button><p class="small" style="color:#fff">Offline • Aman • Tanpa Iklan</p></div>
+
+<header><h2 style="margin:0">🌟 Hery & Nuna AI Pro</h2><div class="small" style="color:#e0e7ff">Teman Terapi & Belajar Anak</div><span id="koin">🪙 0</span><div id="sapa" class="small" style="color:#fde68a"></div></header>
+
+<div class="grid">
+<button class="btn blue" onclick="bicara()">🎤<br>Terapi Bicara</button>
+<button class="btn pink" onclick="perilaku()">💖<br>Perilaku</button>
+<button class="btn green" onclick="belajar()">📖<br>Belajar</button>
+<button class="btn purple" onclick="bermain()">🎮<br>Bermain</button>
+</div>
+
+<div class="card"><b>✅ Check-in Harian</b><div class="small">+50 koin</div><button class="btn green" style="width:100%;padding:12px;margin-top:8px" onclick="checkin()">Check-in</button></div>
+<div class="card"><b>💬 Hery & Nuna:</b><div id="out" style="margin:10px 0;min-height:30px">Yuk mulai!</div><button onclick="ulang()" style="padding:10px;border-radius:10px;cursor:pointer">🔊 Ulangi Pelan</button></div>
+<div class="card"><b>🎁 Toko Hadiah</b><div class="shop" id="shop"></div></div>
+<div class="card"><b>🏆 Koleksiku</b><div id="milik" class="small">Belum ada</div></div>
+
+<div class="card" style="border-color:#fca5a5"><b>🔐 Zona Orang Tua</b><div class="small">PIN aman • Auto-lock 3 mnt • Batas waktu</div>
+<input id="pin" type="password" placeholder="PIN baru (default 1234)"><input id="limit" type="number" placeholder="Batas menit/hari, cth: 30">
+<button class="btn blue" style="width:100%;padding:12px" onclick="setOrtu()">Aktifkan Perisai 🛡️</button>
+<div id="infoOrtu" class="small"></div><div id="dash" class="dash">Memuat...</div></div>
+
+<div class="card small">🛡️ 100% offline, data di HP saja.<br>⚠️ Pendamping belajar, bukan pengganti ahli terapi.</div>
+<div id="lock"><h2>🔒 Terkunci</h2><p>Istirahat dulu ya!</p><button class="btn orange" onclick="bukaKunci()">Buka PIN Ortu</button></div>
+<nav><button>🏠</button><button>🎯</button><button>🎁</button>
