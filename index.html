@@ -1,47 +1,29 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V28 - Direct BRI Auto Delivery - Tanpa Makelar Tanpa WA</title>
-<style>body{background:#020617;color:#fff;font-family:sans-serif;padding:20px} .card{border:1px solid #00ff88;border-radius:16px;padding:16px;margin:12px 0;background:#0f172a} button{background:#00ff88;color:#000;padding:12px 18px;border:0;border-radius:12px;font-weight:700;cursor:pointer;width:100%} .va{background:#000;padding:10px;border-radius:8px;margin:8px 0;font-family:monospace}</style>
+<title>V21 QUANTUM PHP SHIELD - $499-$2999 - 6666 Agent</title>
+<style>body{background:#020617;color:#e2e8f0;font-family:system-ui;padding:20px} .hero{border:2px solid #00ff88;border-radius:20px;padding:20px;background:linear-gradient(135deg,#0f172a,#020617)} .price{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px} .card{border:1px solid #334155;border-radius:16px;padding:16px;background:#0f172a} .cta{background:#00ff88;color:#000;padding:14px;border:0;border-radius:12px;font-weight:800;width:100%;cursor:pointer;margin-top:10px} .badge{background:#00ff88;color:#000;padding:4px 8px;border-radius:20px;font-size:12px}</style>
 </head><body>
-<h2 style="color:#00ff88">🚀 V20 ULTIMATE - 6666 AGENT MESH - AUTO DELIVERY</h2>
-<div class="card">✅ AUTO HEALING ACTIVE SELAMANYA<br>Terminal 1: 6666 Agents Running - 2987 Produk Ready<br>Terminal 2: Super Tunnel 3 Backup - Quantum Crypto X25519MLKEM768<br>Direct BRI T+0 ISO20022 BIS - Tanpa Makelar Tanpa WA</div>
-
-<div class="card">
-<h3>💰 PRODUK DIGITAL 20 BAHASA - DIRECT BRI T+0 - IDR 199K-499K</h3>
-<p>B2B Lead Gen, Code Refactoring, Cross-Border Financial Routing, Quantum Crypto</p>
-<p>Produk: <span id="count">2987+</span> Ready | Counting Sort 0.7s O(n+k) | 12 API Security</p>
-<label>Pilih Produk:</label>
-<select id="product" style="width:100%;padding:10px;margin:8px 0"><option>Loading produk...</option></select>
-<button id="btnPay">1. KLIK - BUAT VA BRIVA & BAYAR OTOMATIS</button>
-<div id="vaBox" style="display:none"><div class="va">VA BRIVA: <b id="vaNum"></b><br>Jumlah: $<span id="usd"></span> (Rp <span id="idr"></span>)<br>TRX: <span id="trx"></span></div><p>Transfer ke VA di atas, lalu klik:</p><button id="btnDownload">2. CEK BAYAR & DOWNLOAD LANGSUNG</button></div>
-<div id="status"></div>
+<div class="hero">
+<h1 style="color:#00ff88">🚀 V21 QUANTUM PHP SHIELD - 6666 AGENT MESH</h1>
+<p><span class="badge">AUTO HEALING ACTIVE SELAMANYA</span> Terminal 1: 6666 Agents Running - 2987+ Produk Ready - Direct BRI T+0 ISO20022 BIS</p>
+<h2>🛡️ Sistem Keamanan Website & PHP Yang Dibutuhkan Dunia Internasional 2024-2030</h2>
+<p>Seluruh pemerintah & perusahaan butuh ini - Gov, BUMN, E-commerce, Hosting - Harga Internasional $499-$2999 - Tanpa Makelar Tanpa WA</p>
 </div>
 
+<div class="price" style="margin-top:20px">
+<div class="card"><h3>Starter $499/yr</h3><p>1 Website<br>120+ Rules Scan<br>WAF 392k Block<br>ISO27001 Report</p><button class="cta" onclick="buy('starter_499')">BUY $499 - AUTO DELIVERY</button></div>
+<div class="card" style="border-color:#00ff88"><h3>Enterprise $1499/yr ⭐ Best</h3><p>50 Website<br>Auto-Heal 6666 Agent<br>Quantum Crypto X25519MLKEM768<br>3 Backup Tunnel</p><button class="cta" onclick="buy('enterprise_1499')">BUY $1499 - AUTO DELIVERY</button></div>
+<div class="card"><h3>Gov/ISP $2999/yr</h3><p>Unlimited<br>Super Tunnel 3 Backup<br>24h Support<br>BIS ISO20022</p><button class="cta" onclick="buy('gov_2999')">BUY $2999 - AUTO DELIVERY</button></div>
+</div>
+
+<div class="card" style="margin-top:16px"><h3>🔍 Live Demo Scanner - Counting Sort 0.7s O(n+k)</h3><p id="demo">Scanning 2987 produk... 0 vulnerabilitas - 12 API Security OK</p><select id="product"><option>produk_action_0001_id.txt</option></select><button class="cta" id="btnPay">1. BUAT VA BRIVA & BAYAR OTOMATIS</button><div id="vaBox" style="display:none"><p>VA: <b id="vaNum"></b> $<span id="usd"></span></p><button class="cta" id="btnDl">2. DOWNLOAD LICENSE + SHIELD ENGINE</button></div></div>
+
 <script>
-async function loadProducts(){
-  try{let r=await fetch('/api/list-products'); let j=await r.json(); let sel=document.getElementById('product');
-  sel.innerHTML=''; j.files.slice(0,100).forEach(f=>{let o=document.createElement('option');o.value=f;o.text=f;sel.appendChild(o);});
-  document.getElementById('count').innerText=j.total;
-  }catch{ // fallback untuk GitHub Pages tanpa API
-    let sel=document.getElementById('product'); sel.innerHTML='';
-    for(let i=1;i<=20;i++){let o=document.createElement('option');o.value=`produk_action_${String(i).padStart(4,'0')}_id.txt`;o.text=o.value;sel.appendChild(o);}
-  }
-}
-loadProducts();
-let currentTrx=null, currentProduct=null;
+function buy(plan){document.getElementById('product').value=plan+'.lic'; document.getElementById('btnPay').click(); window.scrollTo(0,document.body.scrollHeight);}
+let curTrx=null,curProd=null;
 document.getElementById('btnPay').onclick=async()=>{
-  currentProduct=document.getElementById('product').value;
-  document.getElementById('status').innerText='Membuat VA BRIVA...';
-  let r=await fetch(`/api/create-payment?productId=${encodeURIComponent(currentProduct)}`); let j=await r.json();
-  if(j.error){document.getElementById('status').innerText='Set BRI_SECRET di Vercel dulu: '+j.error; return;}
-  currentTrx=j.trxId; document.getElementById('vaNum').innerText=j.vaNumber;
-  document.getElementById('usd').innerText=j.amountUSD; document.getElementById('idr').innerText=j.amountIDR;
-  document.getElementById('trx').innerText=j.trxId; document.getElementById('vaBox').style.display='block';
-  document.getElementById('status').innerText='VA dibuat. Transfer, lalu klik Download.';
+ curProd=document.getElementById('product').value; let r=await fetch(`/api/create-payment?productId=${encodeURIComponent(curProd)}`); let j=await r.json();
+ curTrx=j.trxId; document.getElementById('vaNum').innerText=j.vaNumber; document.getElementById('usd').innerText=j.amountUSD; document.getElementById('vaBox').style.display='block';
 };
-document.getElementById('btnDownload').onclick=async()=>{
-  if(!currentTrx) return; document.getElementById('status').innerText='Cek pembayaran...';
-  // Polling auto: kalau sudah bayar, download langsung
-  window.location.href=`/api/download?trxId=${encodeURIComponent(currentTrx)}&productId=${encodeURIComponent(currentProduct)}`;
-};
+document.getElementById('btnDl').onclick=()=>{ window.location.href=`/api/download?trxId=${curTrx}&productId=${curProd}`; };
 </script>
 </body></html>
