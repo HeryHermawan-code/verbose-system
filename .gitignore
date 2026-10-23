@@ -1,0 +1,3 @@
+yasa.py
+*.env
+**/secrets/**
