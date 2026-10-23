@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hery & Nuna AI Pro</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#fff7ed}
+header{background:linear-gradient(135deg,#1e3a8a,#ec4899);color:#fff;padding:16px;text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px}
+.btn{border:0;border-radius:18px;padding:20px;font-size:16px;font-weight:bold;color:#fff}
+.blue{background:#2563eb}.pink{background:#ec4899}.green{background:#16a34a}.purple{background:#8b5cf6}
+.card{background:#fff;border:2px solid #fde68a;border-radius:12px;padding:12px;margin:12px}
+#splash{position:fixed;inset:0;background:linear-gradient(135deg,#1e3a8a,#ec4899);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;z-index:99;transition:opacity .5s}
+#splash.hide{opacity:0;pointer-events:none}
+#splash input{padding:14px;border-radius:22px;border:0;margin:12px;width:80%;text-align:center}
+#splash button{background:#fff;color:#ec4899;border:0;padding:14px 32px;border-radius:22px;font-weight:bold;font-size:16px}
+</style>
+</head>
+<body>
+<div id="splash"><div>✨ ⭐ ✨</div><div style="font-size:24px;font-weight:bold;margin:8px">Hery & Nuna AI</div><input id="namaAnak" placeholder="Tulis namamu..."><button onclick="mulai()">Mulai! 🚀</button></div>
+<header><h2 style="margin:0">☀️ Hery & Nuna</h2></header>
+<div class="grid">
+<button class="btn blue" onclick="bicara()">🗣️ Bicara</button>
+<button class="btn pink" onclick="perilaku()">💖 Perilaku</button>
+<button class="btn green" onclick="belajar()">📚 Belajar</button>
+<button class="btn purple" onclick="bermain()">🎮 Bermain</button>
+</div>
+<div class="card"><b>✅ Check-in Harian</b><div><button class="btn green" style="padding:10px" onclick="checkin()">Check-in</button> <span id="koin">0 🪙</span></div></div>
+<div class="card"><b>💬 Hery & Nuna:</b><div id="pesan">Halo! Selamat datang!</div></div>
+<script>
+let koin=0;
+function mulai(){let n=document.getElementById('namaAnak').value||'Hebat';document.getElementById('splash').classList.add('hide');document.getElementById('pesan').innerText='Halo '+n+'! Yuk mulai!';}
+function bicara(){document.getElementById('pesan').innerText='Ayo cerita hari ini! 😊';}
+function perilaku(){koin+=5;updateKoin();document.getElementById('pesan').innerText='Kamu anak baik! +5 koin 💖';}
+function belajar(){koin+=10;updateKoin();document.getElementById('pesan').innerText='Belajar itu seru! +10 koin 📚';}
+function bermain(){document.getElementById('pesan').innerText='Yuk main tebak-tebakan! 🎮';}
+function checkin(){koin+=20;updateKoin();document.getElementById('pesan').innerText='Check-in berhasil! +20 koin ✅';}
+function updateKoin(){document.getElementById('koin').innerText=koin+' 🪙';}
+</script>
+</body>
+</html>

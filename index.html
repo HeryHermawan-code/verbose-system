@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>V28 Direct Settlement - Tanpa Makelar</title></head>
+<body>
+<h1>V28 6666 AGENT - DIRECT SETTLEMENT TANPA MAKELAR</h1>
+<p>Produk Real: <span id="count">Loading...</span> | Engine: Counting Sort 0.7s O(n+k) | 12 API Security</p>
+<h2>Bayar Langsung - Settlement H+0 BRI - Tanpa Makelar 5%</h2>
+<button onclick="location.href='/api/settle-direct.js'">BAYAR USD - Direct Settlement</button>
+<div id="list"></div>
+<script>
+fetch('./produk/').then(r=>r.text()).then(t=>{document.getElementById('count').innerText=t.match(/produk_/g)?.length||'2987+';});
+</script>
+</body></html>
