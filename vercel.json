@@ -1,0 +1,1 @@
+{"functions":{"api/settle-direct.js":{"maxDuration":10}},"rewrites":[{"source":"/bayar","destination":"/api/settle-direct.js"}]}
