@@ -1,1 +1,3 @@
-{ "version":2, "github":{"silent":true}, "crons":[{"path":"/api/index","schedule":"0 */3 * * *"}] }
+{
+  "version": 2
+}
