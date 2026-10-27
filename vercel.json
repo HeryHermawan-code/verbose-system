@@ -1,1 +1,1 @@
-{"version":2,"builds":[{"src":"api/*.js","use":"@vercel/node"}],"routes":[{"src":"/api/(.*)","dest":"/api/$1"},{"src":"/(.*)","dest":"/index.html"}],"github":{"silent":true}}
+{ "version":2, "github":{"silent":true}, "crons":[{"path":"/api/index","schedule":"0 */3 * * *"}] }
