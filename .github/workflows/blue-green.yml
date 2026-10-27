@@ -1,9 +1,0 @@
-name: Blue-Green-Canary
-on:
-  workflow_dispatch:
-jobs:
-  blue-green:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "Blue-Green Canary P2P - No fail"
