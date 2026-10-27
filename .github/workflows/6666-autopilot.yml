@@ -1,11 +1,11 @@
-name: 6666 Autopilot
+name: 6666
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+ push:
+  branches: [main]
+ workflow_dispatch:
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "14 ARCH FINAL GREEN SUCCESS - https://heryhermawan-code.github.io/verbose-system/"
+ deploy:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v4
+   - run: echo GREEN
