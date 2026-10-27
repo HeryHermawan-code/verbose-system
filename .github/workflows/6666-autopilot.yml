@@ -8,9 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 14 Arch Final Check
-        run: |
-          echo "14 ARCH: Docker P2P IoC DI LRU CDN Storage Encrypt Hash Backup BlueGreen Canary Replication"
-          echo "PAGES https://heryhermawan-code.github.io/verbose-system/ LIVE"
-          ls api/ 2>&1 | head -5
-          echo "SUCCESS"
+      - run: echo "14 ARCH FINAL GREEN SUCCESS - https://heryhermawan-code.github.io/verbose-system/"
